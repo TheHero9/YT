@@ -5,16 +5,15 @@ import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text,
 import * as THREE from "three"
 import './App.css'
 
-import {Physics} from '@react-three/cannon'
 
 
 
 //Import components
-// import Planes from './assets/Planes';
+import Planes from './assets/Planes';
 // import Floor from './assets/Floor';
 // import {Texts} from './assets/Texts';
 // import Loader from './assets/Loader';
-import ProjectsSection from './assets/ProjectsSection';
+// import ProjectsSection from './assets/ProjectsSection';
 // import EducationSection from './assets/EducationSection';
 // import Roads from './assets/Roads';
 // import MyRoomSection from './assets/MyRoomSection';
@@ -28,7 +27,7 @@ function App() {
     <Canvas>
 
 
-      <Suspense fallback={<Loader/>}>
+      {/* <Suspense fallback={<Loader/>}> */}
         
       <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
@@ -55,7 +54,7 @@ function App() {
       <OrbitControls/>
 
       <pointLight position={[7,0,-7]}/>
-      </Suspense>
+      {/* </Suspense> */}
 
       {/* </KeyboardControls> */}
     </Canvas>
