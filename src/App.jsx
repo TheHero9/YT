@@ -26,7 +26,7 @@ import Planes from './assets/Planes';
 function App() {
 
   let lake= useLoader(
-    GLTFLoader, "src/calm_lake/scene.gltf"
+    GLTFLoader, "src/scene.glb"
   ).scene
 
 
