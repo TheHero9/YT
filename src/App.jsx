@@ -34,7 +34,7 @@ function App() {
     <Canvas>
 
 
-      {/* <Suspense fallback={<Loader/>}> */}
+      <Suspense>
         
       <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
@@ -62,7 +62,7 @@ function App() {
       <OrbitControls/>
 
       <pointLight position={[7,0,-7]}/>
-      {/* </Suspense> */}
+      </Suspense>
 
       {/* </KeyboardControls> */}
     </Canvas>
