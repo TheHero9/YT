@@ -1,5 +1,6 @@
 //Import needed files
 import React, { Suspense } from 'react'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Canvas, useFrame, useLoader} from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera, Stars,Text3D, KeyboardControls, Text, Billboard, RoundedBox} from '@react-three/drei';
 import * as THREE from "three"
@@ -23,6 +24,12 @@ import Planes from './assets/Planes';
 
 
 function App() {
+
+  let lake= useLoader(
+    GLTFLoader, "./src/assets/calm_lake/scene.gltf"
+  ).scene
+
+
   return (
     <Canvas>
 
@@ -40,16 +47,17 @@ function App() {
       {/* <Floor/> */}
       {/* <Decorations/> */}
 
-
+    {/* Lake*/}
+    <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
       
-{/* 
-      <EducationSection/>
+
+      {/* <EducationSection/>
       <ProjectsSection/>
       <MyRoomSection/>
 
-      <Roads/>
+      <Roads/> */}
 
-      <ambientLight/> */}
+      <ambientLight/>
       <Stars/>
       <OrbitControls/>
 
