@@ -1,5 +1,5 @@
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
-import universe from "../universe.jpg"
+import universe from "/assets/universe.jpg"
 import {useLoader} from '@react-three/fiber'
 import * as THREE from "three"
 

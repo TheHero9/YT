@@ -10,7 +10,7 @@ import './App.css'
 
 
 //Import components
-import Planes from './assets/Planes';
+import Planes from '/src/Planes.jsx';
 // import Floor from './assets/Floor';
 // import {Texts} from './assets/Texts';
 // import Loader from './assets/Loader';
