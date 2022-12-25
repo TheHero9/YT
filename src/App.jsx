@@ -15,7 +15,8 @@ import Planes from '/src/Planes.jsx';
 // import {Texts} from './assets/Texts';
 // import Loader from './assets/Loader';
 import ExperienceSection from "/src/ExperienceSection.jsx"
-// import ProjectsSection from './assets/ProjectsSection';
+// import Project from "/src/ProjectsSection.jsx"
+import ProjectsSection from '/src/ProjectSection';
 // import EducationSection from './assets/EducationSection';
 // import Roads from './assets/Roads';
 // import MyRoomSection from './assets/MyRoomSection';
@@ -25,12 +26,6 @@ import ExperienceSection from "/src/ExperienceSection.jsx"
 
 
 function App() {
-
-  // let lake= useLoader(
-  //   GLTFLoader, "/scene.glb"
-  // ).scene
-
-
   return (
     <Canvas>
 
@@ -52,18 +47,18 @@ function App() {
     {/* <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} /> */}
       
       <ExperienceSection/>
-
-      {/* <EducationSection/>
       <ProjectsSection/>
-      <MyRoomSection/>
+      {/* <EducationSection/> */}
 
-      <Roads/> */}
+      {/* <MyRoomSection/> */}
+
+      {/* <Roads/> */}
 
       <ambientLight/>
       <Stars/>
       <OrbitControls/>
 
-      <pointLight position={[7,0,-7]}/>
+      <pointLight position={[7,0,0]}/>
       </Suspense>
 
       {/* </KeyboardControls> */}
