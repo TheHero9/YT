@@ -11,15 +11,16 @@ import './App.css'
 
 //Import components
 import Planes from '/src/Planes.jsx';
-// import Floor from './assets/Floor';
-// import {Texts} from './assets/Texts';
-// import Loader from './assets/Loader';
+import Floor from '/src/OtherParts/Floor';
+import {Texts} from '/src/OtherParts/Texts';
+import Loader from '/src/OtherParts/Loader';
 import ExperienceSection from "/src/ExperienceSection.jsx"
 // import Project from "/src/ProjectsSection.jsx"
-import ProjectsSection from '/src/ProjectSection';
+import ProjectsSection from '/src/ProjectSection.jsx';
 // import EducationSection from './assets/EducationSection';
-// import Roads from './assets/Roads';
-// import MyRoomSection from './assets/MyRoomSection';
+import Roads from '/src/OtherParts/Roads';
+import MyRoomSection from '/src/MyRoomSection.jsx';
+import WaitingSection from '/src/WaitingSection';
 // import Decorations from './assets/Decorations';
 // import Car from './assets/Car';
 
@@ -30,14 +31,14 @@ function App() {
     <Canvas>
 
 
-      <Suspense>
+      <Suspense fallback={<Loader/>}> 
         
-      <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
+      <PerspectiveCamera makeDefault fov={40} zoom={1} rotation={[0,1*Math.PI,0]} position={[0, 50, -50]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
       {/* <Planes/> */}
       {/* <Car/> */}
-      {/* <Texts/> */}
+      <Texts/>
       {/* <Text className="hide" depthOffset={20}  fillOpacity={1} position={[0,5,0]}>Hello</Text> */}
 
       {/* <Floor/> */}
@@ -50,9 +51,10 @@ function App() {
       <ProjectsSection/>
       {/* <EducationSection/> */}
 
-      {/* <MyRoomSection/> */}
+      <MyRoomSection/>
+      <WaitingSection/>
 
-      {/* <Roads/> */}
+      <Roads/>
 
       <ambientLight/>
       <Stars/>
