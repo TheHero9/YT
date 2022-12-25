@@ -14,6 +14,7 @@ import Planes from '/src/Planes.jsx';
 // import Floor from './assets/Floor';
 // import {Texts} from './assets/Texts';
 // import Loader from './assets/Loader';
+import ExperienceSection from "/src/ExperienceSection.jsx"
 // import ProjectsSection from './assets/ProjectsSection';
 // import EducationSection from './assets/EducationSection';
 // import Roads from './assets/Roads';
@@ -25,9 +26,9 @@ import Planes from '/src/Planes.jsx';
 
 function App() {
 
-  let lake= useLoader(
-    GLTFLoader, "/scene.glb"
-  ).scene
+  // let lake= useLoader(
+  //   GLTFLoader, "/scene.glb"
+  // ).scene
 
 
   return (
@@ -39,7 +40,7 @@ function App() {
       <PerspectiveCamera makeDefault fov={40} zoom={1} position={[0,7,15]}/>
       {/* <primitive object={new THREE.AxesHelper(2)}/> */}
 
-      <Planes/>
+      {/* <Planes/> */}
       {/* <Car/> */}
       {/* <Texts/> */}
       {/* <Text className="hide" depthOffset={20}  fillOpacity={1} position={[0,5,0]}>Hello</Text> */}
@@ -48,8 +49,9 @@ function App() {
       {/* <Decorations/> */}
 
     {/* Lake*/}
-    <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} />
+    {/* <primitive object={lake} rotation={[0,0,0]} position={[8.1,-1.4,-8.1]} /> */}
       
+      <ExperienceSection/>
 
       {/* <EducationSection/>
       <ProjectsSection/>
